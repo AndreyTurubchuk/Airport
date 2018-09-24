@@ -16,8 +16,15 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'ru.antur'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
+
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+	baseName = 'airport'
+	version = '0.1.0'
+}
 
 repositories {
 	mavenCentral()
