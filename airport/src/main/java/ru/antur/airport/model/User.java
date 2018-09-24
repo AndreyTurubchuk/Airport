@@ -1,9 +1,7 @@
-// {"name": "Иван","password": "Иванов"}
-
 package ru.antur.airport.model;
 
-import java.io.Serializable;
 
+import java.io.Serializable;
 
 public class User implements Serializable{
     private String name;

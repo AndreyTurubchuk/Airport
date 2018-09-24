@@ -18,11 +18,12 @@ public class UserController {
 
     private final List<User> messageList;
 
-    @Autowired
-    UserMessageSender userMessageSender;
+    private final UserMessageSender userMessageSender;
 
-    public UserController(List<User> messageList) {
+    @Autowired
+    public UserController(List<User> messageList, UserMessageSender userMessageSender) {
         this.messageList = messageList;
+        this.userMessageSender = userMessageSender;
     }
 
     @GetMapping("/demo")

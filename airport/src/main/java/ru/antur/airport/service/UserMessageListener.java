@@ -20,10 +20,8 @@ public class UserMessageListener {
     }
 
     @RabbitListener(queues = RabbitConfig.QUEUE_ORDERS)
-
     public void process(User user) {
-        logger.info("Received user");
-        logger.info(user.toString());
+        logger.info("Received user {}", user.toString());
         messageList.add(user);
     }
 }
