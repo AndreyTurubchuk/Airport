@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/4.1.2/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" th:href="@{/css/main.css}"
+          href="../../css/main.css" />
+
+</head>
+<body>
+<form action="#" th:action="@{/demo}" th:object="${user}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+    <p>Password: <input type="text" th:field="*{password}" /></p>
+    <p><input type="submit" value="Send" /> <input type="reset" value="Reset" /></p>
+</form>
+
+
+
+<!--
+<div>
+    <div class="form">
+        <form action="#" id="userForm" th:action="@{/demo}" th:object="${user}" method="post">
+            <div>
+                <label>Name</label>
+                <input type="text" th:field="*{name}">
+            </div>
+
+            &lt;!&ndash;            <div class="form-body">
+                           <div class="form-group">
+                                <label class="control-label col-sm-3">Name</label>
+                                <div class="col-sm-8">
+                                    <textarea th:field="*{name}" class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Password</label>
+                                <div class="col-sm-8">
+                                    <textarea th:field="*{password}" class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="control-label col-sm-3"></div>
+                                <div class="col-sm-8">
+                                    <a href="#" onclick="document.forms['userForm'].submit();"
+                                       class="btn-save pull-left">SAVE</a>
+                                    &lt;!&ndash;<a th:href="@{/demo}" class="btn-close pull-right">CANCEL</a>&ndash;&gt;
+                                </div>
+                            </div>
+                        </div>&ndash;&gt;
+        </form>
+    </div>
+</div>
+-->
+
+<script type="text/javascript"
+        src="webjars/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+</body>
+</html>
